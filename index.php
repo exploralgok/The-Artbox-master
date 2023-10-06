@@ -12,13 +12,10 @@
 
     <?php include('header.php'); ?>
 
-    <?php echo "ok";?>
-
     <main>
         <div id="liste-oeuvres">
 
-        <?php require('./artwork.php'); ?>
-
+        <?php require('./artworks.php'); ?>
 
         <?php foreach($artworks as $artwork) :?>
             <article class="oeuvre">
