@@ -13,7 +13,7 @@ $artworks = [
 
     [
         'name' => 'Aashaaheen Baadal',
-        'description' => 'Anaisha Devi',
+        'author' => 'Anaisha Devi',
         'description' => 'Sur cette oeuvre conceptuelle à la fois organique, minérale et liquide, Anaisha Devi nous transporte dans un nuage noir envoûtant. Un sombre tableau qui, par son verni éclatant, rayonne tel un marbre poli. Une oeuvre à la cohérence transcendantale, exécutée à la perfection',
         'img' => 'img/pawel-czerwinski-3.png',
         'img_alt' => 'Aashaaheen Baadal',
