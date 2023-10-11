@@ -14,17 +14,35 @@
 
     <main>
 
+
+    <?php
+
+    // gestion cas : pas de paramètre dans l'url
+    // ou id n'est pas un entier
+
+    if (!isset($_GET['id']) || !filter_var($_GET['id'], FILTER_VALIDATE_INT))
+    {
+        echo('Il faut un id entier pour afficher l\'oeuvre');
+        
+        return;
+    }
+
+    ?>
+
     <?php
 
     require('./artworks.php');
     
     foreach($artworks as $artwork) {
+
+
+    // si l'id est dans le tableau && in_array($artwork['id'], $artwork)
     
     //  si l'id de l'oeuvre et l'id dans l'url sont les memes 
 
         if($artwork['id'] == $_GET['id']) { ?>
 
-            <!-- alors tu affiches le détail -->
+            <!-- alors tu affiches le détail de l'oeuvre -->
 
             <article id="detail-oeuvre">
                 <div id="img-oeuvre">
@@ -40,7 +58,7 @@
 
             </article>
         
-            <?php }
+        <?php }
     } ?>
 
 </main>
