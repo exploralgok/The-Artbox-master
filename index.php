@@ -2,7 +2,6 @@
 
 <!doctype html>
 <html lang="fr">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport"
@@ -11,7 +10,6 @@
     <link rel="stylesheet" href="css/style.css">
     <title>The ArtBox</title>
 </head>
-
 <body>
     <?php include('header.php'); ?>
     <main>
@@ -28,7 +26,5 @@
         </div>
     </main>
     <?php include('footer.php'); ?>
-
 </body>
-
 </html>
