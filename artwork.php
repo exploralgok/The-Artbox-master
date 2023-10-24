@@ -5,7 +5,6 @@
     // on renvoie vers la page d'acceuil
     if (!isset($_GET['id']) || !filter_var($_GET['id'], FILTER_VALIDATE_INT)){
         header("Location: ./index.php");
-        // die();    
     }
     require('./artworks.php');
     // 3. si l'id n'existe pas 
@@ -21,14 +20,14 @@
         // pour l'utiliser dans le code html ensuite
         if ($artwork['id'] == $_GET['id']){
                 $_artwork = $artwork;
-            }
+        }
     }
     // mais si la variable temporaire n'a pas été remplacé par un array 
     // ça veut dire l'id de la page ne correspond à aucun id dans le array
     // alors on renvoie vers la page d'acceuil
     if(!$_artwork){
         header("Location: ./index.php");
-        }
+    }
 ?>
 
 <!doctype html>
@@ -49,11 +48,12 @@
             <div id="img-oeuvre">
                 <img src="<?php echo $_artwork["img"]; ?>" alt="<?php echo $_artwork["img_alt"]; ?>">
             </div>
-        <div id="contenu-oeuvre">
-            <h1><?php echo $_artwork["name"]; ?></h1>
-            <p class="description"><?php echo $_artwork["author"]; ?></p>
-            <p class="description-complete"><?php echo $_artwork["description"]; ?></p>
-        </div>
+            <div id="contenu-oeuvre">
+                <h1><?php echo $_artwork["name"]; ?></h1>
+                <p class="description"><?php echo $_artwork["author"]; ?></p>
+                <p class="description-complete"><?php echo $_artwork["description"]; ?></p>
+            </div>
+        </article>
     </main>
     <?php include('footer.php'); ?>
 </body>
